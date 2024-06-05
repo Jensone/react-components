@@ -2,7 +2,8 @@ import { useState } from "react";
 import Navigation from "./components/Navigation";
 import myLogo from "./assets/react.svg";
 import heroImage from "../public/vite.svg";
-import Hero from "../Hero";
+import Hero from "./components/Hero";
+import Bubble from "./components/Bubble";
 
 function App() {
   /**
@@ -47,10 +48,26 @@ function App() {
     image: heroImage,
   });
 
+  const [bubbles, setBubbles] = useState([
+    {
+      title: "React",
+      link: "https://reactjs.org/",
+    },
+    {
+      title: "Vite",
+      link: "https://vitejs.dev/",
+    },
+    {
+      title: "Tailwind CSS",
+      link: "https://tailwindcss.com/",
+    },
+  ]);
+
   return (
     <>
       <Navigation menu={menu} logo={logo} />
       <Hero title={hero.title} subtitle={hero.subtitle} image={hero.image} />
+      <Bubble list={bubbles} />
       {/* <SearchBar /> */}
       {/* <Card /> */}
       {/* <CallToAction /> */}
