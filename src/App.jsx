@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Navigation from "./components/Navigation";
 import myLogo from "./assets/react.svg";
+import heroImage from "../public/vite.svg";
+import Hero from "../Hero";
 
 function App() {
   /**
@@ -34,10 +36,21 @@ function App() {
    */
   const [logo, setLogo] = useState(myLogo);
 
+  /**
+   * Pour mettre à jour le titre, l'image
+   * et le sous-titre du composant Hero,
+   * modifiez les valeurs ci-dessous
+   */
+  const [hero, setHero] = useState({
+    title: "Title of the hero component",
+    subtitle: "Your value proposition goes here.",
+    image: heroImage,
+  });
+
   return (
     <>
       <Navigation menu={menu} logo={logo} />
-      {/* <Hero /> */}
+      <Hero title={hero.title} subtitle={hero.subtitle} image={hero.image} />
       {/* <SearchBar /> */}
       {/* <Card /> */}
       {/* <CallToAction /> */}
