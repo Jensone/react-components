@@ -4,6 +4,7 @@ import myLogo from "./assets/react.svg";
 import heroImage from "../public/vite.svg";
 import Hero from "./components/Hero";
 import Bubble from "./components/Bubble";
+import Card from "./components/Card";
 
 function App() {
   /**
@@ -48,6 +49,10 @@ function App() {
     image: heroImage,
   });
 
+  /**
+   * Pour mettre à jour les bulles,
+   * modifiez le tableau ci-dessous
+   */
   const [bubbles, setBubbles] = useState([
     {
       title: "React",
@@ -63,13 +68,28 @@ function App() {
     },
   ]);
 
+  const [cardDetail, setCardDetail] = useState({
+    image: "https://placehold.it/150",
+    title: "Title of the card",
+    description:
+      "Description of the card goes here with some interesting details about the card.",
+    buttonText: "Click me",
+    link: "/link-of-the-card",
+  });
+
   return (
     <>
       <Navigation menu={menu} logo={logo} />
       <Hero title={hero.title} subtitle={hero.subtitle} image={hero.image} />
       <Bubble list={bubbles} />
       {/* <SearchBar /> */}
-      {/* <Card /> */}
+      <Card
+        image={cardDetail.image}
+        title={cardDetail.title}
+        description={cardDetail.description}
+        buttonText={cardDetail.buttonText}
+        link={cardDetail.link}
+      />
       {/* <CallToAction /> */}
       {/* <Footer /> */}
     </>
