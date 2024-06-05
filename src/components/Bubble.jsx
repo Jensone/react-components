@@ -1,6 +1,6 @@
 export default function Bubble({ list }) {
   return (
-    <div className="overflow-x-auto flex justify-between p-4">
+    <div className="overflow-x-auto flex flex-wrap gap-3 justify-center p-4">
       {list.map((item) => (
         <a
           href={item.link}
