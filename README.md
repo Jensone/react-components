@@ -1,8 +1,22 @@
-# React + Vite
+# TP Perfectionnement React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objectifs
 
-Currently, two official plugins are available:
+- Créer des composants React en utilisant les hooks et les props.
+- Faire de ces composants des composants réutilisables.
+- Mettre en place un système pour paramétrer les composants.
+- Styliser les composants avec TailwindCSS.
+- Les style est totalement libre, mais il doit être cohérent.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Les composants
+
+- Navigation.jsx
+- Hero.jsx
+- Search.jsx
+- CallToAction.jsx
+- Card.jsx
+- Footer.jsx
+
+## Livraison
+
+- Envoie un lien vers un repository GitHub contenant le projet à hello@agiliteach.org
